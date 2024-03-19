@@ -15,16 +15,18 @@ echo "    - user_email = '<>'"
 echo "    - push_token = $INPUT_PUSH_TOKEN = ${!INPUT_PUSH_TOKEN}"
 echo
 
-store_branches=(
-#store-au
-store-br
-#store-ca
-store-dev
-#store-eu
-store-sar
-#store-us
-#store-uk
-)
+store_branches=("${INPUT_STORES}")
+echo "${store_branches[@]}"
+#store_branches=(
+##store-au
+#store-br
+##store-ca
+#store-dev
+##store-eu
+#store-sar
+##store-us
+##store-uk
+#)
 
 # Check if the push token environment variable is set; if not, terminate the script
 if [[ -z "${!INPUT_PUSH_TOKEN}" ]]; then
