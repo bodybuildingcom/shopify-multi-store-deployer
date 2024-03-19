@@ -47,6 +47,10 @@ git checkout "${input_from_branch}" && git pull origin "${input_from_branch}" ||
 
 # Fetch and checkout the 'to' branches
 for input_to_branch in "${store_branches[@]}"; do
+  set +o xtrace
+  echo "Fetching and checking out the '${input_to_branch}' branch"
+  set -o xtrace
+
   git fetch origin "${input_to_branch}"
   git checkout "${input_to_branch}" && git pull origin "${input_to_branch}" || git checkout -b "${input_to_branch}" origin/"${input_to_branch}"
 
