@@ -13,6 +13,10 @@ inputs:
     description: "Name of the branch to merge to"
     required: false
     default: "develop"
+  stores:
+    description: "list of store branches to merge"
+    required: false
+    default: "store-dev"
   user_name:
     description: "User name for git commits"
     required: false
