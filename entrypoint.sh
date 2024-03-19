@@ -60,7 +60,7 @@ for input_to_branch in "${store_branches[@]}"; do
   # Check if merging is necessary, if not then terminate the script
   if git merge-base --is-ancestor "${input_from_branch}" "${input_to_branch}"; then
     echo "No merge is necessary"
-    exit 0
+#    exit 0
   fi
 
   # Disable command tracing
@@ -89,8 +89,8 @@ for input_to_branch in "${store_branches[@]}"; do
   # Check if there are any changes to commit
   if [[ -z $(git status -s) ]]; then
     echo "No changes to commit, the working tree is clean"
-    echo "--- End Script --"
-    exit 0
+#    echo "--- End Script --"
+#    exit 0
   else
     echo "Changes detected, committing changes"
 
