@@ -19,6 +19,7 @@ store_branches="${INPUT_STORES}"
 #echo $INPUT_STORES
 
 env
+echo "${!INPUT_PUSH_TOKEN}"
 
 #store_branches=(
 ##store-au
