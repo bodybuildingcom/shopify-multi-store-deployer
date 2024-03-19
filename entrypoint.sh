@@ -15,7 +15,7 @@ echo "    - user_email = '<>'"
 echo "    - push_token = $INPUT_PUSH_TOKEN = ${!INPUT_PUSH_TOKEN}"
 echo
 
-store_branches=("${INPUT_STORES}")
+store_branches="${INPUT_STORES}"
 echo $INPUT_STORES
 
 #store_branches=(
